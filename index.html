@@ -1,8 +1,667 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>webtest</title>
-  </head>
-  <body>
-    <h1>Hello word!!</h1>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="佑佑的記事，岡農電子一乙KSVS-13">
+  <meta name="google-site-verification" content="ahU6xrI0TT7CxVwpRUhX1lzmo9MB6hpzLAEJ5SVIqFk" />
+  <link rel="canonical" href="https://cttb.liuyork.repl.co/">
+  <!--設定本站網址-->
+  <title>佑佑的記事📝</title>
+  <link rel="shortcut icon" href="/doct/smemu701.png" type="image/x-icon" />
+  <link rel="icon" href="/doct/EMC701.png" type="image/x-icon" />
+  <link rel="bookmark" href="/doct/EMC701.png" type="image/x-icon" />
+
+  <link rel="apple-touch-icon-precomposed" sizes="192x192" href="/doct/EMC701.png" />
+
+  <meta name="Keywords" content="ksvs13,電子一乙,佑佑的資訊網,cttb,ksvs佑佑,d">
+  <style>
+    div#footer {
+      position: fixed;
+      bottom: 0;
+      left: 100px;
+      background: #e0e0e0;
+      width: 94.8vw;
+      height: 92px;
+      z-index: ;
+    }
+
+    div#sidebar {
+      width: 100px;
+      height: 100%;
+      background: lightblue;
+      position: fixed;
+      left: 0px;
+      top: 95px;
+      padding: 9px;
+    }
+
+    div#body {
+      background: #fffccf;
+      position: fixed;
+      left: 100px;
+      top: 95px;
+      height: 74%;
+      width: 100%;
+      overflow: auto;
+      padding: 12px;
+      float: right;
+      margin: 0px;
+    }
+
+
+
+    div {
+      margin: 0;
+
+    }
+
+    div#Header {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 95px;
+      background: #ffeb9c;
+    }
+
+    dialog {
+      background: skyblue;
+      border: none;
+      height: 105%;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      left: -10px;
+      z-index: 10;
+    }
+
+    .dialogpt {
+      width: auto;
+      height: auto;
+    }
+
+    .side {
+      color: darkslateblue
+    }
+
+    hr {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      color: #000000 !important;
+    }
+
+    .iiback {
+      margin: 0;
+      width: 80px;
+      border: outset 2px #aaa;
+      background: skyblue;
+      position: fixed;
+      left: 117px;
+      transition: 0.3s;
+    }
+
+    .iiback:hover {
+      border-color: deepskyblue;
+    }
+
+    .iiback:active {
+      background: #70abc3;
+      border: inset 2px deepskyblue;
+      transition: 0.3s;
+    }
+
+    .note {
+      margin: 0;
+      width: 120px;
+      text-align: center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      padding-right: 28px;
+      background-image: linear-gradient(60deg, transparent 50%, #256fa0 50%), linear-gradient(120deg, #256fa0 50%, transparent 50%), linear-gradient(to right, #fff, #fff);
+      background-position: calc(100% - 15px) calc(1.5em - 12px), calc(100% - 5px) calc(1.5em - 12px), 100% 0;
+      background-size: 10px 15px, 10px 15px, 1.5em 1.5em;
+      background-repeat: no-repeat;
+      font-size: 1em;
+      padding: 8px 16px;
+      border: 1px solid #b1b1b1;
+      height: inherit;
+      border-radius: 0;
+      line-height: 1.42857143;
+      color: #555;
+      background-color: #fff;
+      box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      resize: none;
+      text-transform: none;
+      margin: 0;
+      font: inherit;
+    }
+  </style>
+  <!--TRA-style-->
+  <TRA>
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/bootstrap.min.css?version=8.7.43">
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/font-awesome.min.css?version=8.7.43">
+    <link rel="stylesheet" href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/tip_normal.css?version=8.7.43">
+
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/tip_default.css?version=8.7.43">
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/tip_station_map.css?version=8.7.43">
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/jquery-ui.min.css?version=8.7.43">
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/bootstrap-datepicker.css?version=8.7.43">
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/bootstrap-datepicker.standalone.css?version=8.7.43">
+    <link href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/images/favicon.ico" rel="icon" type="image/ico">
+
+
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/jquery-ui.min.css?version=8.7.43">
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/bootstrap-datepicker.css?version=8.7.43">
+    <link rel="stylesheet"
+      href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/bootstrap-datepicker.standalone.css?version=8.7.43">
+    <link rel="stylesheet" href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/jquery-ui.autocomplete.css">
+    <link rel="stylesheet" href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/marquee.css">
+    <link rel="stylesheet" href="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/static/css/jquery-confirm.min.css">
+    <style>
+      .pid {
+        text-transform: uppercase;
+      }
+    </style>
+  </TRA>
+  <!--TRA-style－end-->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6411635073101037"
+    crossorigin="anonymous"></script>
+
+
+</head>
+<!--
+	           空格字元 &emsp;      -->
+
+<body>
+  <!--側邊欄位-->
+
+  <div id="sidebar" style="text-align:center;line-height: 36px;">
+    <div class="side">
+      <div onclick="curriculum.show()">課表</div>
+      <div onclick="contactbook.show()">聯絡簿</div>
+      <div onclick="playhtml.show()">玩html</div>
+      <div onclick="ytbmusic.show()">音樂</div>
+    </div>
+  </div>
+  </div>
+  <!--側邊欄位end-->
+  <!--body-->
+  <div id="body">
+    <h1 align="center">
+      佑佑的記事
+    </h1>
+    <div style="
+    width: 72px;
+    height: 64px;
+  position: relative;
+    left: 97px;
+    top: -50px;
+">
+
+      <p align="center">
+        <style>
+          table.data {
+            background-color: #00FFFF;
+          }
+        </style>
+        <script language="JavaScript">
+          var enabled = 0; today = new Date();
+          var day, date, isnDay;
+          isnDay = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+          document.write("<table border=0  cellspacing=0 cellpadding=0 bgcolor=00FFFF class=data ><TR><TD align=center><font color=0033ff>")
+          document.write(+ (today.getYear() - 11) + "年");//原指令today.getYear(),因顯示錯誤自行減11,2016/3/10
+          document.write((today.getMonth() + 1) + "</b>月</font></TD></TR>")
+          document.write("<TR><TD align=center><font SIZE=6 face=arial color=ff0066><b>" + today.getDate() + "</b></font><font color=000066> 日 </font></TD></TR>")
+          document.write("<TR><TD align=center bgcolor=000066><font color=ffff00>" + isnDay[today.getDay()] + "</font></TD></TR>")
+          document.write("</table>")
+        </script>
+    </div>
+    <div style="width: 100%;position: relative;left: 97px;top: -50px;" align="center">
+      <div style="width:500px;height:25px;color:red;background:black;margin-top: 35px;">
+        <marquee direction="left" scrollamount="5"><b> &emsp;&emsp;&emsp;&emsp;&emsp;⚠️本網站目前維護中!<span> </span><span
+              style="color:#22C32E">佑佑的網站 </span><span>歡迎您的光臨！</span>
+          </b>
+        </marquee>
+      </div>
+    </div>
+    <br>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6411635073101037"
+      crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6411635073101037"
+      crossorigin="anonymous"></script>
+    <!-- My ads -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6411635073101037" data-ad-slot="7624763630"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div style="position: relative;bottom: 50px;">
+      <div style="
+    background: black;
+    color: red;
+    width: 232px;
+    height: 35px;
+    line-height: 17px;
+">
+        <p>
+        <div>本站：<span class="highlight2"> &nbsp;&nbsp;
+            新左營</span></div>
+        <div>This Stop：<span class="highlight2">Xinzuoying</span></div>
+      </div>
+      <style>
+        @keyframes blink-smooth {
+          to {
+            color: transparent;
+          }
+        }
+
+        @keyframes blink {
+          50% {
+            color: transparent;
+          }
+        }
+
+        .highlight {
+          animation: 1s blink-smooth 6 alternate;
+        }
+
+        .highlight2 {
+
+          animation: 1s blink 60 steps(1);
+        }
+      </style>
+      <style>
+        @keyframes blink-smooth {
+          to {
+            color: transparent;
+          }
+        }
+
+        @keyframes blink {
+          50% {
+            color: transparent;
+          }
+        }
+
+        .ihighlight {
+          animation: 0.6s blink-smooth 6 alternate;
+        }
+
+        .ihighlight2 {
+
+          animation: 0.6s blink 70 steps(1);
+        }
+      </style>
+      <div>
+        <div id="listBtni" onclick="listBtni()" style="width:192px;height: 40px;margin-top: 10px;" class="note">版主筆記
+        </div>
+        <div id="textlistni" style="display: none;">
+          <div style="
+    overflow: auto;
+    width:192px;
+    height: 125px;
+    background: #ffd663;
+    margin-top: 0px;
+    margin-left:0;
+    position: relative;
+    z-index: 9;
+            
+    ">
+            <ul>
+
+              <li>更改 課表位址</li>
+              <hr>
+              <li>動畫輪播跑馬燈</li>
+              <hr>
+              <li>新增 臺南—新左營—左營 閃字</li>
+              <li>更改回上頁按鈕active-bgcolor</li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <script>
+          function listBtni() {
+            var listBtn = document.getElementById('listBtni');
+            var textlistn = document.getElementById('textlistni');
+            if (textlistn.style.display === 'none') {
+              textlistn.style.display = 'block';
+              listBtn.innerText = "版主筆記";
+            } else {
+              textlistn.style.display = 'none';
+              listBtn.innerText = "版主筆記";
+            }
+          }
+        </script>
+      </div>
+      <div>
+        <p style="
+    line-height: 15px;
+    margin: 5px;
+        -webkit-appearance: button;
+    cursor: pointer;
+"><span style="color:#22C32E;">
+            <span
+              style="background-color:#000000;padding-left: 9px;padding-right: 9;line-height: 14px;">&nbsp;&nbsp;&nbsp;岡山&nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp;<span style="
+    color: red;
+" class="ihighlight2">新左營</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;高雄&nbsp;&nbsp;&nbsp;</span><br><span
+              style="background-color:#000000;padding-left: 9px;padding-right: 6px;font-size: 12px;">&nbsp;&nbsp;Gang
+              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<span style="
+    color: red;
+" class="ihighlight2">Xinzuoying</span>&nbsp; &nbsp; &nbsp; &zwj; &zwj;Kaohsiung</span></span><br>
+          <span style="
+    color: red;
+    font-size: 1px;
+    position: absolute;
+    top: 95px;
+    left: 74px;
+    -webkit-appearance: button;
+    cursor: pointer;
+    z-index:2;
+" class="ihighlight2">→</span>
+          <span style="
+    color: #22C32E;
+    font-size: 0.1px;
+    position: absolute;
+    top: 95px;
+    left: 158px;
+    z-index:2;
+">→→</span>
+        </p>
+
+      </div>
+    </div>
+    <div>
+      <?= 'Hello World!'; ?>
+    </div>
+    <div name="dialog1">
+      <dialog id="curriculum">
+        <div style="width: 5px;margin: 0;">
+          <div onclick="curriculum.close()" style="" class="iiback">◀ 回上頁</div>
+        </div>
+        <p>
+          <center>
+            <h2 style="margin-top: 0px;">課表 </h2>
+          </center>
+        <div style="width:115px;">
+          <div id="listBtn" onclick="listBtn()" class="link">看不到課表？</div>
+          <div id="textlistn" style="display: none;">
+            <a href="https://cttb.liuyork.repl.co/doct/課表.png" target="_blank">另開視窗來查看</a>
+          </div>
+          <script>
+            function listBtn() {
+              var listBtn = document.getElementById('listBtn');
+              var textlistn = document.getElementById('textlistn');
+              if (textlistn.style.display === 'none') {
+                textlistn.style.display = 'block';
+                listBtn.innerText = "返回";
+              } else {
+                textlistn.style.display = 'none';
+                listBtn.innerText = "看不到課表？";
+              }
+            }
+          </script>
+        </div>
+        </p>
+        <div style="overflow:auto; width: auto;text-align: center;">
+          <img style="white-space:nowrap;width: 50%;" src="doct/課表.png" />
+        </div>
+      </dialog>
+    </div>
+    <div name="dialog2">
+      <dialog style="width:100%;padding:15px" id="contactbook">
+
+        <body>
+          <div align="left" style="padding: 0px;">
+            <div onclick="contactbook.close()" style="" class="iiback">◀ 回上頁</div>
+          </div>
+          <p>
+            <br>
+          <h1>功課📝</h1><br>
+
+
+          </p>
+          <p>
+            請於 <strong style="color:red">?/?(?)</strong> 完成
+          </p>
+      </dialog>
+
+    </div>
+    <div name="dialog3">
+      <dialog style="width:100%;padding:15px" id="playhtml">
+
+        <body>
+          <div align="left" style="padding: 0px;">
+            <div onclick="playhtml.close()" style="" class="iiback">◀ 回上頁</div>
+          </div>
+          <div>
+            <h1>
+              <br>
+              玩Html
+            </h1>
+          </div>
+          <div class="zone">
+            <input type="button" value="查詢" class="btn btn-3d" />
+
+          </div>
+          <div>
+            <div>
+              <div style="height: 179px;width: 494px;top: 19px; position: relative;">
+                <form>
+                  <textarea type="text" id="text" style="width:400px;height: 50px;" value="">function ReportProblem()
+{
+	$.get("/cam/feedback", function(data, status)
+	{
+		if (status == "success" && data == "ok")
+		{
+			document.getElementById('ReportProblemSuccess').style.display='block';
+		}
+	});
+}</textarea>
+                  <input type="reset" value="清除" />
+                </form>
+                <button type="button" id="btn" class="btn btn-basic btn-lg g-recaptcha"
+                  data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit">複製</button>
+                </form>
+              </div>
+
+              <script>
+                const select = (DOM) => document.querySelector(DOM);
+
+                select('#btn').addEventListener('click', () => {
+                  select('#text').select();
+                  document.execCommand("copy");
+                })
+
+                select('#textarea-btn').addEventListener('click', () => {
+                  select('#textarea').select();
+                  document.execCommand("copy");
+                })
+              </script>
+
+              <a href="http://google.com/search?as_q=?XXX&amp;as_sitesearch=YYY" rel="nofollow" target="_blank">
+                內嵌搜尋引擎測試</a>
+            </div>
+            <p>
+               &#128521;
+            </p>
+            
+            <br>
+            <div class="g-recaptcha" data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit"
+              data-size="invisible">
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" id="myCheckbox"> Enable Button</label>
+              <button id="myButton" disabled>Click me</button>
+              <script>
+                const checkbox = document.getElementById("myCheckbox");
+                const button = document.getElementById("myButton");
+
+                checkbox.addEventListener("change", function () {
+                  button.disabled = !checkbox.checked;
+                });
+
+              </script>
+
+            </div>
+
+
+
+
+
+
+            <!-- 引用 JS -->
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <div class="zone">
+              <input type="button" value="查詢" class="btn btn-3d g-recaptcha"
+                data-sitekey="6LfAgoUoAAAAABrb7ZLZY-5KoN5Kc0mBzdDwSDHA" data-action="verify1"
+                data-callback="verifyCallback" />
+
+            </div>
+            <div>
+              <div class="g-recaptcha" data-sitekey="6Ld-Po8oAAAAAJFiwAWH08I2-dW0x-BeO1s_i0q_"
+                data-callback="onRecaptchaVerify"></div>
+              <button id="myButton" style="position:relative;top:50px;" disabled>提交</button>
+              <script>
+                // 將 "YOUR_RECAPTCHA_SITE_KEY" 替換為您的 reCAPTCHA 網站金鑰
+
+                const submitButton = document.getElementById("myButton");
+                let recaptchaScore = 0.0;  // 驗證分數的初始值
+
+                // 回調函數，當 reCAPTCHA 驗證成功時被調用
+                function onRecaptchaVerify(response) {
+                  if (response) {
+                    // 從 reCAPTCHA 響應中獲取驗證分數
+                    recaptchaScore = grecaptcha.getResponse();
+
+                    // 根據驗證分數來啟用或禁用按鈕
+                    if (recaptchaScore >= 0.5) {  // 此處 0.5 是一個示例閾值
+                      submitButton.disabled = false;
+                    } else {
+                      submitButton.disabled = true;
+                    }
+                  } else {
+                    recaptchaScore = 0.0;
+                    submitButton.disabled = true;
+                  }
+                }
+              </script>
+
+            </div>
+            <div>
+              <input type="password" id="passwordInput" placeholder="輸入密碼">
+              <button id="unlockButton" disabled>解鎖</button>
+              <script src="doct/js/pwd.js"></script>
+            </div>
+          </div>
+          
+        </body>
+      </dialog>
+    </div>
+    <div name="dialog4">
+      <style>
+        iframe#yt {
+          margin: 33px;
+        }
+      </style>
+      <dialog style="width:100%;padding:15px" id="ytbmusic">
+        <div align="left" style="padding: 0px;">
+          <div onclick="ytbmusic.close()" style="" class="iiback">◀ 回上頁</div>
+        </div>
+        <div>
+          <center>
+            <h1>music</h1>
+          </center>
+        </div>
+        <iframe id="yt" width="560" height="315"
+          src="https://www.youtube.com/embed/videoseries?si=Q7ztM1mub3kvriOR&amp;list=PLNbFtwd3SSf2KTfE-lKyyultYv8h2B3Kl"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe id="yt" width="560" height="315"
+          src="https://www.youtube.com/embed/videoseries?si=lCdBemv9exFTM_yR&amp;list=PLNbFtwd3SSf3YnNvR79QtlNWJSsTGBdTY"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe id="yt" width="560" height="315"
+          src="https://www.youtube.com/embed/videoseries?si=TW_x0ppXS8XJ9coF&amp;list=PLH4VGYMxvIDncSZWtEQdRziJNPBh-k-dm"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe id="yt" width="560" height="315"
+          src="https://www.youtube.com/embed/videoseries?list=PLu6jpn0SoOWgCbzD69CnxaoDypjOXQS7y"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe id="yt" width="560" height="315"
+          src="https://www.youtube.com/embed/videoseries?list=PLalyfyo1zp793cDeFOiV1HxiCq2fSKM5z"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <iframe id="yt" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=WIS6cm2ifvBusK2m&amp;list=PLkr0INFs02XvnH7_jlPOs1NlkkHHxYh_q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </dialog>
+    </div>
+    <div name="dialog5">
+      <div>
+        <img src="/doct" />
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--body-end-->
+
+  <div style='clear:both;' id="Header">
+    <div style="padding:17px">
+
+      <a href="https://cttb.liuyork.repl.co"><img src="doct/網站logo.png" width="235" height="60" alt="佑佑的日常" class="logo"
+          title="佑佑的日常"></a>
+    </div>
+
+
+  </div>
+  <div id="footer" style="padding:10px">
+    <div class="pull-right">
+      <div>
+
+        <a href="https://sites.google.com/view/yorkwebsite" target="_blank">
+
+          <button class="btn btn-basic btn-lg">佑佑的網站</button>
+
+        </a>
+        <a href="https://trasearch.liuyork.repl.co" target="_blank">
+          <button class="btn btn-basic btn-lg">臺鐵線上查詢工具</button>
+        </a>
+
+      </div>
+    </div>
+
+    <div>
+
+
+      <a href="mailto:liu.york.0520@gmail.com">聯絡版主</a>
+      <span value=""
+        onclick="javascript:window.open('https://forms.gle/7xuZDq1T98ooP5jA8','WindowOpen3','toolbar=no,location=no,directories=no,width=900,height=600')">回報問題</span>
+      <span style=" margin-left: 35px;">版權所有 ©2019 All Rights Reserved</span>
+    </div>
+  </div>
+</body>
+
 </html>
