@@ -4,7 +4,7 @@ const passwordInput = document.getElementById("passwordInput");
             passwordInput.addEventListener("input", function() {
               const password = passwordInput.value;
 
-              if (password === "24864028") {  // 檢查密碼是否等於 "24864028"
+              if (password === "0325") {  // 檢查密碼是否等於 "0325"
                 unlockButton.disabled = false;
               } else {
                 unlockButton.disabled = true;
