@@ -202,9 +202,10 @@
       <div onclick="contactbook.show()">聯絡簿</div>
       <div onclick="playhtml.show()">玩html</div>
       <div onclick="ytbmusic.show()">音樂</div>
+			<div onclick="information.show()">關於本站</div>
     </div>
   </div>
-  </div>
+  
   <!--側邊欄位end-->
   <!--body-->
   <div id="body">
@@ -633,10 +634,13 @@
 					allowfullscreen></iframe>
       </dialog>
     </div>
-    <div name="dialog5">
-      <div>
-        <img src="/doct" />
-      </div>
+     <div name="dialog5">
+      <dialog class="dialog" style="width:100%;padding:15px" id="contactbook" >
+          <div align="left" style="padding: 0px;">
+            <div onclick="information.close()" style="" class="iiback">◀ 回上頁</div>
+					</div>
+        <h1>關於本站</h1>
+      </dialog>
 
     </div>
 
