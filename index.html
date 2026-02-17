@@ -56,6 +56,10 @@
       margin: 0;
 
     }
+	  
+	.g-recaptchaForm {
+    display: -webkit-inline-box;
+	}
 
     div#Header {
       position: fixed;
@@ -107,7 +111,7 @@
     }
 
     .iiback:active {
-      background: #70abc3;
+      background: #92e0ff;
       border: inset 2px deepskyblue;
       transition: 0.3s;
     }
@@ -332,6 +336,8 @@
               <li>更改回上頁按鈕active-bgcolor</li>
 				<hr>
               <li>更新網站頁首圖示網址</li>
+				<hr>
+			  <li>改善玩html排版</li>
             </ul>
           </div>
         </div>
@@ -535,7 +541,7 @@
                 data-callback="verifyCallback" />
 
             </div>
-            <div>
+            <div class="g-recaptchaForm">
               <div class="g-recaptcha" data-sitekey="6Ldo720sAAAAAKhcM4EJuExhoAO8WpR_0Os0DWFB"
                 data-callback="onRecaptchaVerify"></div>
               <button id="myButton" style="position:relative;top:50px;" disabled>提交</button>
