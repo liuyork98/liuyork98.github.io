@@ -91,6 +91,9 @@
     .side {
       color: darkslateblue
     }
+		.sidebtn:focus {
+			
+		}
 
     hr {
       margin-top: 0 !important;
@@ -198,11 +201,11 @@
 
   <div id="sidebar" style="text-align:center;line-height: 36px;">
     <div class="side">
-      <div onclick="curriculum.show()">課表</div>
-      <div onclick="contactbook.show()">聯絡簿</div>
-      <div onclick="playhtml.show()">玩html</div>
-      <div onclick="ytbmusic.show()">音樂</div>
-			<div onclick="information.show()">關於本站</div>
+      <div class="sidebtn" onclick="curriculum.show()">課表</div>
+      <div class="sidebtn" onclick="contactbook.show()">聯絡簿</div>
+      <div class="sidebtn" onclick="playhtml.show()">玩html</div>
+      <div class="sidebtn" onclick="ytbmusic.show()">音樂</div>
+	  	<div class="sidebtn" onclick="information.show()">關於本站</div>
     </div>
   </div>
   
