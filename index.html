@@ -663,11 +663,72 @@
     </div>
      <div name="dialog5">
       <dialog class="dialog" style="width:100%;padding:15px" id="information" >
+		  <body>
           <div align="left" style="padding: 0px;">
             <div onclick="information.close()" style="" class="iiback">◀ 回上頁</div>
 					</div>
         	<h1>關於本站</h1>
-		  		<div></div>
+		  		<div>
+					<div class="col-xs-9 right-main">
+             <!--標題-->
+            <div class="main-header">
+                <h2 class="pull-left"><strong>鐵路文化(性)資產介紹</strong></h2>
+                <p class="pull-right">最後更新時間: 2023-10-15</p>
+                <div class="bt-line"></div>
+                <p id="txtURL">https://www.railway.gov.tw:443/tra-tip-web/adr/customized_info?I=BOdk83%2BFNKcj1mQq5y6xb9VL3nikM%2BzkOcotriiesFL4S%2B5tqzXeJ8E1cSTNBHAq%2FiS%2BVu9H4kmqF%2BA%3D&amp;selectIndex=</p>
+            </div>
+            <!--標題 end-->
+
+            <!--子單元選單-->
+            <div class="clearfix submenu-box">
+            	<h3 class="pull-left sub-heading">鐵路文化(性)資產資訊</h3>
+                <div class="form-inline pull-right">
+					<form action="/tra-tip-web/adr/customized_info" method="get">
+						<div class="form-group">
+							<label for="selSubIndex" class="sr-only">查詢項目</label>
+							<select id="selSubIndex" class="form-control" name="selectIndex">
+								<option value="" selected="">請選擇</option>
+								<option value="0">鐵路文化(性)資產資訊</option>
+							</select>
+						</div>
+						<!-- <input class="btn btn-basic btn-lg" type="submit" value="查詢">  -->
+						<input class="btn btn-basic btn-lg" type="button" value="查詢" onclick="bringupIndexPage();">
+					</form>
+				</div>
+            </div>
+            <noscript>
+                <p>您的瀏覽器不支援JavaScript，您可點選以下連結瀏覽其他年度。</p>
+                <span>
+                	<a class="links" href="&amp;selectIndex=0" title="鐵路文化(性)資產資訊">鐵路文化(性)資產資訊</a>
+                	<span class="small gray">&nbsp;|&nbsp;</span>
+                </span>
+            </noscript>
+            <!--子單元選單 end-->
+
+            <!--子單元內容區塊-->
+            <div class="about-public-info">
+                <div class="adm-article">
+		
+						<!--editor 可編輯內容 -->
+						<div><div class="adm-attachments">
+<div class="col-label">檔案下載</div>
+
+<div class="col-cont">
+<ul class="files">
+	<li><a href="/tra-tip-web/tip/file/bb165d3d-2ffc-471d-933f-12ec54759feb" title="文化性資產資訊.pdf">文化性資產資訊.pdf</a></li>
+	<li><a href="/tra-tip-web/tip/file/c7cff48b-7c3b-430d-b348-b78eabeddd1e " title="文化性資產資訊.odp">文化性資產資訊.odp</a></li>
+</ul>
+</div>
+</div>
+</div>
+				
+					<!--editor 可編輯內容 end-->
+                </div>
+            </div>
+            <!--子單元內容區塊 end-->
+        </div>
+				</div>
+		</body>
       </dialog>
 
     </div>
