@@ -522,7 +522,23 @@
                   data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit">複製</button>
                 </form>
               </div>
-
+<div style="height: 179px;width: 494px;top: 19px; position: relative;">
+                <form>
+                  <textarea type="text" id="text" style="width:400px;height: 50px;" value="">
+					  <script type='text/javascript'>
+    $("*").live("touchstart", function() {
+      $(this).addClass("active");
+    }).live("touchend", function() {
+      $(this).removeClass("active");
+    });
+</script>
+</textarea>
+                  <input type="reset" value="清除" />
+                </form>
+                <button type="button" id="btn" class="btn btn-basic btn-lg g-recaptcha"
+                  data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit">複製</button>
+                </form>
+              </div>
               <script>
                 const select = (DOM) => document.querySelector(DOM);
 
