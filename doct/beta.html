@@ -222,5 +222,172 @@
 	<div>
 		<button class="btn btn-3d">測試</button>
 	</div>
+	 <div >
+            <div>
+              <div style="height: 179px;width: 494px;top: 19px; position: relative;">
+                <form>
+                  <textarea type="text" id="text1" style="width:400px;height: 50px;" value="">
+					  function ReportProblem()
+{
+	$.get("/cam/feedback", function(data, status)
+	{
+		if (status == "success" && data == "ok")
+		{
+			document.getElementById('ReportProblemSuccess').style.display='block';
+		}
+	});
+}
+
+					      -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "黑體-繁", "頻方-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei",Arial, serif;
+    line-height: 1.6;
+    font-size: 1em;
+    box-sizing: border-box;
+    user-select: none;
+    margin: 0;
+    width: 80px;
+    border: outset 2px #aaa;
+    background: skyblue;
+    position: fixed;
+    left: 117px;
+    transition: 0.3s;
+</textarea>
+                  <input type="reset" value="清除" />
+                </form>
+                <button type="button" id="btn1" class="btn btn-basic btn-lg g-recaptcha"
+                  data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit">複製</button>
+                
+              </div>
+<div style="height: 179px;width: 494px;top: 19px; position: relative;">
+                <form>
+                  <textarea type="text" id="text2" style="width:400px;height: 50px;" value="">
+					  <script type='text/javascript'>
+    $("*").live("touchstart", function() {
+      $(this).addClass("active");
+    }).live("touchend", function() {
+      $(this).removeClass("active");
+    });
+</script>
+</textarea>
+                  <input type="reset" value="清除" />
+                </form>
+                <button type="button" id="btn2" class="btn btn-basic btn-lg g-recaptcha"
+                  data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit">複製</button>
+                
+              </div>
+              <script>
+                const select = (DOM) => document.querySelector(DOM);
+
+                select('#btn1').addEventListener('click', () => {
+                  select('#text1').select();
+                  document.execCommand("copy");
+                })
+				select('#btn2').addEventListener('click', () => {
+                  select('#text2').select();
+                  document.execCommand("copy");
+                })
+                select('#textarea-btn').addEventListener('click', () => {
+                  select('#textarea').select();
+                  document.execCommand("copy");
+                })
+              </script>
+
+              <a href="http://google.com/search?as_q=?XXX&amp;as_sitesearch=YYY" rel="nofollow" target="_blank">
+                內嵌搜尋引擎測試</a>
+            </div>
+            <p>
+               &#128521;
+            </p>
+            
+            <br>
+			  <div class="btn-block" style="width: 250px;">
+    <a class="btn btn-lg btn-line" href="https://www.railway.gov.tw/" alt="臺鐵官網" style="
+    min-width: 250px;" target="_blank">臺鐵官網</a>
+    
+</div>
+            <div class="g-recaptcha" data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit"
+              data-size="invisible">
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" id="myCheckbox"> Enable Button</label>
+              <button id="myButton" disabled>Click me</button>
+              <script>
+                const checkbox = document.getElementById("myCheckbox");
+                const button = document.getElementById("myButton");
+
+                checkbox.addEventListener("change", function () {
+                  button.disabled = !checkbox.checked;
+                });
+
+              </script>
+
+            </div>
+
+
+
+
+
+
+            <!-- 引用 JS -->
+			  <form>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <div class="zone">
+              <input type="button" value="查詢" class="btn btn-3d g-recaptcha"
+                data-sitekey="6Ldo720sAAAAAD6IlSAGGBuou-nKc4hYxHt5ZoPM" data-action="verify1"
+                data-callback="verifyCallback" />
+
+            </div>
+            <div class="g-recaptchaForm">
+              <div class="g-recaptcha" data-sitekey="6Ldo720sAAAAAKhcM4EJuExhoAO8WpR_0Os0DWFB"
+                data-callback="onRecaptchaVerify"></div>
+              <button id="myButton" style="position:relative;top:50px;" disabled>提交</button>
+              <script>
+                // 將 "YOUR_RECAPTCHA_SITE_KEY" 替換為您的 reCAPTCHA 網站金鑰
+
+                const submitButton = document.getElementById("myButton");
+                let recaptchaScore = 0.0;  // 驗證分數的初始值
+
+                // 回調函數，當 reCAPTCHA 驗證成功時被調用
+                function onRecaptchaVerify(response) {
+                  if (response) {
+                    // 從 reCAPTCHA 響應中獲取驗證分數
+                    recaptchaScore = grecaptcha.getResponse();
+
+                    // 根據驗證分數來啟用或禁用按鈕
+                    if (recaptchaScore >= 0.5) {  // 此處 0.5 是一個示例閾值
+                      submitButton.disabled = false;
+                    } else {
+                      submitButton.disabled = true;
+                    }
+                  } else {
+                    recaptchaScore = 0.0;
+                    submitButton.disabled = true;
+                  }
+                }
+              </script>
+
+            </div>
+				  <input class="btn btn-3d" type="reset" value="重設"/>
+			  </form>
+            <div>
+              <input type="password" id="passwordInput" placeholder="輸入密碼">
+              <button id="unlockButton" disabled>解鎖</button>
+              <script src="doct/js/pwd.js"></script>
+            </div>
+			  <div id="adblock">
+				  <ins class="adsbygoogle"
+     						style="display:block"
+     						data-ad-client="ca-pub-6411635073101037"
+     						data-ad-slot="1799105005"
+     						data-ad-format="auto"
+     						data-full-width-responsive="true"></ins>
+					<script>
+    			 (adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				  
+			  </div>
+          </div>
 </body>
 </html>
