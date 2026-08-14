@@ -1,0 +1,710 @@
+/*20200113*/
+@charset "UTF-8";
+.mg_0{
+	margin-top: 0px!important;
+}
+/*é€šç”¨bannerä¿®æ”¹å°å­—é€£çµ*/
+.banner_lts{
+	color: #FFF34A!important;
+}
+.btn-linear:focus-within { 
+outline: 4px #FF0004 dotted !important; 
+outline: 0 none; 
+}
+/*å‘¨éŠåˆ¸é …ç›®æ›´æ”¹*/
+.sidemenu button {
+    display: block;
+    padding: 9px 16px;
+    font-weight: 600;
+    background-color: white;
+    border: none;
+    /* width: 100%; */
+}
+.left-side .active {
+    color: #00296Eï¼;
+}
+.main-tab ul.tabs button {
+    display: block;
+    padding: 8px 16px;
+    background: #efefef!important;
+    margin-right: 1px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    bottom: -1px;
+}
+.main-tab ul.tabs .active button {
+    border-top: 4px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background: #fff!important;
+    position: relative;
+    bottom: -1px;
+    padding: 6px 16px;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "é»‘é«”-ç¹", "é »æ–¹-ç¹", "Heiti TC", "å¾®è»Ÿæ­£é»‘é«”", "Microsoft JhengHei",Arial, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1em;
+}
+
+
+/*-----------------reset----------------*/
+
+button,
+input,
+select,
+textarea {
+    font-size: 0.9em;
+    resize: none;
+}
+
+label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+input:focus:-webkit-input-placeholder {
+    color: transparent;
+    outline: 4px #FF0004 dotted !important;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+
+/* FF 4-18 */
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+
+/* FF 19+ */
+
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+
+/* IE 10+ */
+
+
+select:-ms-expand {
+    display: none;
+    /*IE*/
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 4px #FF0004 dotted !important;
+}
+
+a[accesskey] {
+    float: left;
+	margin-left: -27px;
+}
+
+a i.fa {
+    color: #256fa0;
+}
+
+
+
+img {
+    max-width: 100%;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+dl,
+dt,
+b dd,
+ol,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: " ";
+    content: none;
+} 
+
+a.links, .links {/*é»ƒè‰²é€£çµ*/
+    color: #256fa0!important;
+}
+a.links:hover {
+    text-decoration: underline;
+}
+a.color-rag,
+.color-rag {/*æ©˜è‰²*/
+    color: #af0015;
+}
+
+/*------------------æ–‡å­—å¤§å° é¡è‰²--------------*/
+.font18 {
+    font-size: 1.125em;
+}
+.font-small {
+    font-size: 0.875em;
+}
+
+
+.gray {
+    color: #666666;
+}
+
+.red {
+    color: #860002;
+}
+
+.green {
+    color:#256fa0;
+}
+.white {
+    color: #Fff;
+}
+
+
+/*æ¨™é¡Œ*/
+
+h1 strong , h2 strong , h3 strong , h4 strong {
+    font-weight: 500;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 1.75em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.25em;
+}
+/*----------------------list åˆ—è¡¨æ¨£å¼----------------------*/
+li>ul {
+    margin:10px 0;
+}
+.decimal>li{/*æ•¸å­—*/
+    list-style: decimal;
+    margin-left: 25px;
+    margin-bottom:0.5em;
+    text-indent: 0;
+}
+
+.list_parentheses{/*æ‹¬è™Ÿæ•¸å­—*/
+    margin-left:0;
+}
+ 
+.list_parentheses>li {
+    list-style-type:none;
+    list-style-position:inside;
+    counter-increment: cnt;
+    padding-left: 2em;
+    text-indent:-1.5em;
+    margin: 0.5em 0;
+}
+.list_parentheses>li:before {
+  display: marker;
+  content: "(" counter(cnt) ") ";
+}
+.list_parentheses :not(li) {
+  text-indent:0;
+}
+
+.list_disc>li {/*å¯¦å¿ƒåœ“å½¢*/
+   list-style-type: disc;
+   margin-left: 25px;
+}
+ol ol {
+    margin-bottom:1em;
+}
+.spacing>li {
+    margin-bottom:25px;
+}
+ul.offer-add li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+ul.offer-add>li, .offer-add>dd {
+    margin-left: 10px;
+    text-indent: -10px;
+}
+.offer-add+.offer-add {
+    margin-top: 15px;
+}
+
+.list_circle li {
+    list-style-type: circle; /*ç©ºå¿ƒåœ“å½¢ç¬¦è™Ÿ*/
+    margin-left: 25px;
+}
+.note-list .list_circle li {/*é™„è¨»å¾Œé¢æŽ¥ç©ºå¿ƒç¬¦è™Ÿ*/
+    text-indent: 0;
+}
+
+.decimal :not(li), .list_disc :not(li), .list_circle :not(li)  {
+    list-style: none;
+}
+ul.offer-add :not(li), .offer-add :not(dd) {
+    margin-left: 0;
+    text-indent: 0;
+}
+
+.offer-basic {/*æ‰“å‹¾*/
+    margin-bottom:16px;
+    font-weight: bold;
+}
+.offer-basic li:before{
+    font-family: FontAwesome;
+    content: "\f046";
+    margin-right:3px;
+    color: #256fa0; 
+    font-weight: normal;
+}
+.offer-add>li:before, .offer-add dt:before{/*ç®­é ­*/
+    font-family: FontAwesome;
+    content: "\f0da";
+    margin-right:3px;
+    color: #ccc; 
+
+}
+.offer-add>li {
+    list-style: none;
+}
+.offer-add ol li{
+    margin-left:20px;
+}
+
+/*----------------------list åˆ—è¡¨æ¨£å¼ only for æ—…å®¢é‹é€å¥‘ç´„----------------------*/
+dl.ptc-list{
+	overflow: auto;
+}
+dl.ptc-list dt,
+dl.ptc-list dd{
+	line-height: 1.8em;
+	font-weight: normal;
+	float: left;
+	margin: 0;
+}
+dl.ptc-list dt{
+	clear: both;
+	width: 4em;
+	text-align: right;
+}
+dl.ptc-list dd{
+	width: calc(100% - 4em);
+	text-align: left;
+}
+dl.ptc-list dt.twoword{	width: 3em;}
+dl.ptc-list dd.twoword{	width: calc(100% - 3em);}
+dl.ptc-list dt.fourword{ width: 5em;}
+dl.ptc-list dd.fourword{ width: calc(100% - 5em);}
+
+dl.ptc-list dl{
+	overflow: auto;
+	margin: 0 0 0.2em;
+}
+dl.ptc-list dl dl dt{
+	width: 1.5em;
+}
+dl.ptc-list dl dl dd{
+	width: calc(100% - 1.5em);
+}
+
+/*-------------------------æŒ‰éˆ•-------------------------*/
+.btntop {
+    position: fixed;
+    bottom: 120px;
+    right: 45px;
+    width: 45px;
+    height: 45px;
+    z-index: 10;
+}
+.btntop a {
+    border-radius: 50%;
+    border:1px solid #ccc;
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+    text-align: center;
+    display: block;
+    background: #fff;
+    width: 45px;
+    height: 45px;
+    font-size: 0.875em;
+    color: #666;
+}
+.btntop a.icon-fa:before {
+    display: block;
+    line-height: normal;
+    line-height: 0.5;
+    font-size: 2em;
+    margin: 0;
+    margin-top: 5px;
+}
+.btn {
+    font-size: 1em;
+}
+
+/*ç¶ åº•æ¨£å¼*/  
+a.btn-basic, .btn-basic { 
+    background: #256fa0;
+    color: #fff;
+}
+a.btn-basic:hover, .btn-basic:hover, .btn-basic:active, a.btn-basic:active {
+    background: #009bad;
+    color: #fff;
+}
+
+/*ç·šæ¡†æ¨£å¼*/ 
+.btn-line, a.btn-line {  
+    border: 1px solid #256fa0;
+    color: #256fa0;
+    background: transparent;
+}
+
+.btn-line:hover, a.btn-line:hover {
+    background: #256fa0;
+    color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5) inset;
+}
+
+/*ç·šæ¡†æ¨£å¼--æ©˜*/ 
+.btn-line-rag, a.btn-line-rag {  
+    border: 1px solid #ff8400;
+    color: #ff8400;
+    background: transparent;
+}
+
+.btn-line-rag:hover, a.btn-line-rag:hover {
+    background: #ff8400;
+    color: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5) inset;
+}
+
+/*æ¢ä»¶é¸æ“‡---ç°è‰²æŒ‰éˆ•*/
+.btn-grayed, .btn-grayed:hover {
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+
+}
+
+/*å°åž‹è¡¨æ ¼å…§æŒ‰éˆ•*/
+.btn-type {
+    padding:1px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-right: 4px;
+    margin-top: 2px;
+}
+
+.links.btn-type {
+    border: 1px solid #000;
+	background: #fff;
+}
+
+/*æ¼¸å±¤æŒ‰éˆ•*/
+
+a.btn-linear, .btn-linear {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fbfbfb+0,ffffff+20,ffffff+65,efefef+100 */
+    background: #fbfbfb;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #fbfbfb 0%, #ffffff 20%, #ffffff 65%, #efefef 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fbfbfb 0%, #ffffff 20%, #ffffff 65%, #efefef 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fbfbfb 0%, #ffffff 20%, #ffffff 65%, #efefef 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#efefef', GradientType=0);
+    /* IE6-9 */
+    border: 1px solid #b1b1b1;
+}
+
+.btn-linear.active, .btn-linear.active a,
+.btn-linear.active:hover, a.btn-linear.active:hover {
+    background: #256fa0;
+    color: #fff;
+}
+.btn-linear:active {
+    background: #eee;
+}
+
+/*.btn-linear, .btn-linear:focus {
+  outline: 4px #FF0004 dotted !important;
+  outline: 0 none!important;
+}
+*/
+
+
+/*æ©˜è‰²æŒ‰éˆ•--æ­ä¹˜åå¥½æŒ‰éˆ•*/
+a.brn-rag, .btn-rag {
+    min-width: 130px;
+    padding: 3px 0;
+    border-radius: 1em;
+    border: #256FA0 1px solid;
+    color: #256FA0!important;
+    margin-left: 16px;
+    background: transparent;
+}
+
+a.brn-rag:hover, .btn-rag:hover {
+    background: #fff!important;
+    color: #256FA0!important;
+}
+/*æ©˜è‰²æŒ‰éˆ•--æ­ä¹˜åå¥½æŒ‰éˆ• end*/
+
+
+/*é¸å–®ç«‹é«”æŒ‰éˆ•*/
+
+a.btn-3d, .btn-3d {
+    min-width: 200px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00d1e0+0,00c4d8+100 */
+    background: #256fa0;
+    color: #fff;
+    padding: 12px 15px;
+    box-shadow: 0 5px 0 rgb(0, 89, 123), 0 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+a.btn-3d:hover, .btn-3d:hover,
+a.btn-3d:focus, .btn-3d:focus {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#44d9ea+13,00d1e0+90,00c4d8+100 */
+    background: #05f1ff;
+    color: #000;
+    color: #000a:focus;
+}
+
+a.btn-3d:active, .btn-3d:active {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00d1e0+0,00c4d8+100 */
+    background: #00d1e0;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #00d1e0 0%, #00c4d8 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #00d1e0 0%, #00c4d8 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #00d1e0 0%, #00c4d8 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00d1e0', endColorstr='#00c4d8', GradientType=0);
+    /* IE6-9 */
+    color: #fff;
+    box-shadow: 0 2px 0 rgba(0, 162, 181, 1), 0 3px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 3px;
+}
+/*é¸å–®ç«‹é«”æŒ‰éˆ• end*/
+
+/*é¸å–®ç«‹é«”æŒ‰éˆ•--ç°*/
+
+a.btn-3d-liner, .btn-3d-liner {
+    width: 200px;
+    background: #f1f1f1;
+    color: #666;
+    padding: 12px 0;
+    box-shadow: 0 5px 0 rgba(150, 150, 150, 0.1), 0 7px 5px rgba(150, 150, 150, 0.3);
+}
+
+a.btn-3d-liner:hover, .btn-3d-liner:hover,
+a.btn-3d-liner:focus, .btn-3d-liner:focus {
+    background: #dadada;
+    box-shadow: 0 5px 0 rgba(100, 100, 100, 0.1), 0 7px 5px rgba(100, 100, 100, 0.5);    
+}
+
+a.btn-3d-liner:active, .btn-3d-liner:active {
+    box-shadow: 0 2px 0 rgba(100, 100, 100, 0.1), 0 3px 3px rgba(100, 100, 100, 0.6);    
+    position: relative;
+    top: 3px;
+}
+/*é¸å–®ç«‹é«”æŒ‰éˆ• end*/
+
+.btn-3d+.btn-ad {
+    margin-left: 15px;
+    position: relative;
+    top:10px;
+}
+
+.btn-fullgroup2 {/*å·¦å³æ»¿ç‰ˆæŒ‰éˆ•*/
+    margin:8px 0;
+}
+.btn-fullgroup2 .btn {
+    width: 48%;
+}
+
+.btn-fullgroup2 .btn+.btn {
+    margin-left: 2%;
+}
+
+/*é€å‡ºæŒ‰éˆ• ç½®å³*/
+.btn-sentgroup {
+    margin:16px 0;
+}
+.btn-sentgroup {
+    text-align: right;
+}
+.btn-sentgroup .btn+.btn {
+    margin-left:8px;
+}
+.btn-sentgroup .remind-info {/*æŒ‰éˆ•çµ„æ—æé†’å­—æ¨£*/
+    margin-right:16px;
+    color: red;
+}
+.btn-sentgroup a.remind-info {
+    color: #256fa0;
+}
+.btn-sentgroup a.remind-info:hover {
+    text-decoration: underline;
+}
+
+/*å‰å¾€æŒ‰éˆ• ç½®ä¸­*/
+.btn-gogroup {
+    margin:16px 0;
+
+}
+.btn-gogroup {
+    text-align: center;
+}
+.btn-gogroup .btn {
+    min-width: 160px;
+}
+
+/*å‰å¾€ç”³è«‹æŒ‰éˆ•*/
+.btn-apply {
+    margin:25px 0;
+}
+.btn-apply .btn {
+    min-width: 250px;
+}
+
+/*-------------------------æŒ‰éˆ• end-------------------------*/
+
+
+/*------------------å€å¡Šä¸é¡¯ç¤º--------------*/
+
+.unvisible{
+    display: none;
+}
+
+/*--------------------å–®è¡Œå­—æ•¸é™åˆ¶---------------------*/
+.ellipsis {
+overflow:hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+
+/*--------------------æ»‘éŽæ–‡å­—é¡¯ç¤º---------------------*/
+.tooltip {
+    width:150px;
+}
+/*---------------------------é¢æ¿------------------------*/
+.form-panel {/*ç°è‰²å…§å®¹*/
+    padding: 1.5em 20px;
+    background-color: #f5f5f5;
+    font-size: 0.875em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-panel .subheader {
+    margin:0;
+    line-height: normal;
+}
+.form-panel .subheader h3{
+    margin-top:0;
+    line-height: normal;
+}
+
+/*------é–“è·ä½¿ç”¨------*/
+
+.mbsp1 {
+    margin-bottom: 24px;
+}
+
+
+/*---------------------------æŽ’ç‰ˆ------------------------*/
+.mt1 {margin-top: 10px;}
+.mt2 {margin-top: 20px;}
+.mt3 {margin-top: 30px;}
+
+.mt4 {margin-top: 40px;}
+.mt5 {margin-top: 50px;}
+.mt6 {margin-top: 60px;}
+.mt7 {margin-top: 70px;}
+.mt8 {margin-top: 80px;}
+.mt9 {margin-top: 90px;}
+.mt10 {margin-top: 100px;}
+
+.mb1 {margin-bottom: 10px;}
+.mb2 {margin-bottom: 20px;}
+.mb3 {margin-bottom: 30px;}
+.mb4 {margin-bottom: 40px;}
+.mb5 {margin-bottom: 50px;}
+.mb6 {margin-bottom: 60px;}
+.mb7 {margin-bottom: 70px;}
+.mb8 {margin-bottom: 80px;}
+.mb9 {margin-bottom: 90px;}
+.mb10 {margin-bottom: 100px;}
+
+.pt1 {padding-top: 10px;}
+.pt2 {padding-top: 20px;}
+.pt3 {padding-top: 30px;}
+.pt4 {padding-top: 40px;}
+.pt5 {padding-top: 50px;}
+.pt6 {padding-top: 60px;}
+.pt7 {padding-top: 70px;}
+.pt8 {padding-top: 80px;}
+.pt9 {padding-top: 90px;}
+.pt10 {padding-top: 100px;}
+
+.pb1 {padding-bottom: 10px;}
+.pb2 {padding-bottom: 20px;}
+.pb3 {padding-bottom: 30px;}
+.pb4 {padding-bottom: 40px;}
+.pb5 {padding-bottom: 50px;}
+.pb6 {padding-bottom: 60px;}
+.pb7 {padding-bottom: 70px;}
+.pb8 {padding-bottom: 80px;}
+.pb9 {padding-bottom: 90px;}
+.pb10 {padding-bottom: 100px;}
+/*
+     FILE ARCHIVED ON 03:13:38 May 09, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:07:49 Aug 14, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.58
+  captures_list: 0.552
+  exclusion.robots: 0.081
+  exclusion.robots.policy: 0.067
+  esindex: 0.006
+  cdx.remote: 8.912
+  LoadShardBlock: 109.882 (3)
+  PetaboxLoader3.datanode: 120.26 (4)
+  load_resource: 63.308
+  PetaboxLoader3.resolve: 44.876
+*/

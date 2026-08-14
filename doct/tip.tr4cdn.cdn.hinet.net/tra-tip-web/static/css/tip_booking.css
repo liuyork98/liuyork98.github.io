@@ -1,0 +1,1119 @@
+@charset "UTF-8";
+/*-----------------------------------訂票頁面0113---------------------------------------*/
+
+/*步驟區塊*/
+.stepbar {
+	margin : 0 0 16px 0;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	padding:8px 16px;
+	line-height: 3em;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfcfc+79,eeeeee+100 */
+background: #fcfcfc; /* Old browsers */
+background: -moz-linear-gradient(top,  #fcfcfc 79%, #eeeeee 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #fcfcfc 79%,#eeeeee 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #fcfcfc 79%,#eeeeee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+
+}
+.stepbar .ahead {
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #666;
+	margin:0.5em 0;
+}
+.step-progress {
+	margin-bottom:3px;
+	font-size: 1.125em;
+}
+.step-progress li{
+	background: #fff;
+	border-radius:5px;
+	position: relative;
+	text-align: center;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dbdbdb+1,efefef+100 */
+background: #dbdbdb; /* Old browsers */
+background: -moz-linear-gradient(left,  #dbdbdb 1%, #efefef 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #dbdbdb 1%,#efefef 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #dbdbdb 1%,#efefef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#efefef',GradientType=1 ); /* IE6-9 */
+	box-shadow: 0 3px 0 #ccc;
+}
+
+.step-progress .step1 {
+	border-radius: 5px 0 0 5px;
+}
+.step-progress .step3 {
+	border-radius: 0 5px 5px 0;
+}
+.step-progress li.active {
+background: #256fa0;
+    color: #fff;
+    box-shadow: 0 3px 0 #123d5a;
+    filter: inherit;
+}
+.step-progress .step1:after, .step-progress .step2:after {
+	/*content: "\f0da";
+	position: absolute;
+	font-size: 4.5em;
+	right:-24px;
+	z-index: 5;
+	color: #EFEFEF;
+	background: transparent;*/
+}
+.step-progress .step1.active:after, .step-progress .step2.active:after {
+	color: #00bcd2;
+	background: transparent;
+}
+.step-bookingid {
+	text-align: right;
+}
+.step-bookingid-id {
+	margin-left:8px;
+}
+
+
+
+/*--------------------------------------行程列表---------------------------------------*/
+.search-trip {
+	margin-bottom:16px;
+
+}
+
+/*列車資訊*/
+.trip-info {
+	margin-bottom:15px;
+	border-radius: 5px;
+	border: 1px solid #eee;
+	padding:5px 15px;
+}
+.trip-info td {
+	vertical-align: top;
+	padding:5px 10px;
+}
+.trip-info th {
+	font-size: 1.25em;
+	border-bottom:1px dotted #ccc;
+}
+.trip-info .time+.location {
+	margin-left:5px;
+}
+
+/*搜尋條件*/
+.search-summary-bar {
+	background: #666;
+	color: #fff;
+	padding:8px 16px;
+	position: relative;
+}
+.search-number-title p {
+	font-size: 1.25em;
+	display: inline-block;
+	margin-right:8px;
+}
+.search-number-title .info {
+	color: #fff5b2;
+	margin-left:16px;
+}
+.search-number-title .date {
+	margin-right:16px;
+}
+.search-number-title .icon-to:before {
+	color: #fff5b2;
+	margin:0 8px;
+	line-height: 1.3em;
+}
+.search-summary-bar .search-page {
+	position: absolute;
+	right:16px;
+	top:8px;
+}
+.search-summary-info {
+	border-top:1px solid #777;
+	padding-top:8px;
+}
+.search-page .btn.disabled {
+	opacity: .8;
+	color: #666;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.3) inset;
+}
+.search-page .btn.disabled:before, .search-page .btn.disabled:after {
+	color: inherit;
+}
+.search-summary-bar button {
+	color:#333;
+}
+/*結果表格*/
+.itinerary-controls, .detail-box table {
+	width:100%;
+	margin-top:0;
+	font-size: 0.938em;
+}
+.itinerary-controls {
+	border-left:1px solid #ccc;
+	border-bottom:3px solid #ccc;
+}
+.detail-box table th[colspan], .itinerary-controls .check-way, .itinerary-controls .more {
+	text-align: center;
+}
+.check-way .icon-download:before{
+	font-size: 1.3em;
+}
+.detail-box .time-location {
+	text-align: center;
+}
+.detail-box .time-location span{
+	padding:0 5px;
+}
+
+.itinerary-controls>tbody>tr>th, .itinerary-controls>tbody>tr>td{
+	padding:8px 8px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	box-shadow: 0 -2px 0px rgba(100,100,100,0.1) inset;
+}
+.itinerary-controls>tbody>tr>th {
+	background: #ddd;
+	white-space:nowrap;
+}
+.itinerary-controls.tdbg tr:nth-of-type(odd) td,.itinerary-controls .trbg td {/*雙數列 灰底*/
+	background: #f6f6f6;
+}
+.itinerary-controls .trbg-top td {
+	border-top-width:2px;
+	border-top-color:#bbbbbb;
+}
+.itinerary-controls td.trips {
+	padding-left:16px;
+}
+.itinerary-controls .chevron-up, .itinerary-controls .chevron-down,{
+	width:16px;
+	height: 16px;
+	min-width: inherit;
+}
+.itinerary-controls .chevron-up:before, .itinerary-controls .chevron-down:before {
+	margin-left: 0;
+}
+/*高鐵臺鐵區分*/
+.itinerary-controls th.bg-train {/*臺鐵*/
+	background: #00BCF2;
+}
+.itinerary-controls  th.bg-thsec {/*高鐵*/
+	background: #FF6500;
+}
+.itinerary-controls tr:nth-of-type(2) th.bg-train {/*臺鐵*/
+	background: #00BCF2;
+}
+.itinerary-controls tr:nth-of-type(2) th.bg-thsec {/*高鐵*/
+	background: #FF6500;
+}
+.itinerary-controls th.bg-train, .itinerary-controls th.bg-thsec {
+	color: #000;
+	text-align: center;
+	border-color:#fff;
+}
+.itinerary-controls tr:first-child th.bg-train, .itinerary-controls tr:first-child th.bg-thsec {
+	border-radius: 10px 10px 0 0;
+}
+.itinerary-controls th.bg-space {/*空白底*/
+	background: #fff;
+	border: none;
+}
+
+
+/*詳細表格*/
+.detail-box {
+	padding: 0rem 15px 5px 15px;
+	box-shadow: none;
+	background: #fbfbf0;
+}
+td.detail-box-td, .itinerary-controls>tbody>tr>td.detail-box-td {
+	padding: 0;
+	border-bottom: 0;
+}
+
+.detail-box table {
+	border-collapse: separate;
+  	border-spacing: 0;
+}
+.detail-box table th, .detail-box table td {
+	border-right:none;
+	box-shadow: none;
+	border-top:1px dotted #b6b79f;
+	padding: 4px 0;
+
+}
+.detail-box table th {
+	background:transparent;
+	border-top:none;
+	color: #000;
+}
+.detail-box .train-type {
+	padding-left:16px;
+}
+.detail-box .trips-rec {
+
+}
+.itinerary-controls .fa-check:before {
+	color: #ccc;
+	font-size: 1.5em;
+}
+.itinerary-controls .fa-check.active:before {
+	color: #00bcd2;
+}
+.itinerary-controls .icon-to:before {
+	color: #ccc;
+	line-height: 1.5em;
+	margin: 0 5px;
+}
+.itinerary-controls th .icon-to:before {
+	color: #666;
+}
+.itinerary-controls a.icon:before {
+	margin-left:0;
+}
+.itinerary-controls .detail-box .icon-to:before {
+	color: #b6b79f;
+}
+.symbol img+img {
+	margin-left:8px;
+}
+
+/*訂票錯誤訊息*/
+.search-trip-mag {
+	border: 1px solid #ccc;
+}
+.search-trip-mag h2 {
+	text-align: center;
+	margin:24px;
+	font-size: 1.375em;
+	font-weight: bold;
+}
+.search-trip-mag .warning {
+	color: #ff0000;
+}
+.search-blink-warp {
+	margin:24px auto;
+}
+.search-blink-warp .row {
+	margin-bottom:16px;
+}
+.search-blink-warp .btn+.btn {
+	margin-left:8px;
+}
+
+/*---------------------------------------------篩選框-------------------------------------------*/
+
+.filter-service ul {
+	margin-top:8px;
+	padding:8px 16px;
+	background: #333;
+	color: #fff;
+}
+.filter-service li {
+	margin-right:16px;
+/* 	float: left; */
+	display: inline-block;
+}
+.filter-service li.pull-right {
+	margin-right:0;
+}
+.filter-service li img {
+	margin-right: 5px;
+}
+.filter-service .btn {
+	color: #333;
+}
+/*---------------------------------------------訂單 購物車-------------------------------------------*/
+.cartlist-head {
+	padding:8px 16px;
+	background:#086873;
+	position: relative;
+	line-height: 42px;
+}
+.cartlist-id {
+	color: #fff;
+}
+.cartlist-id .font18 {
+	margin-left:5px;
+	font-weight: 600;
+}
+.cartlist-right {
+	position: absolute;
+	top:5px;
+	right:8px;
+}
+.cartlist-right.white {
+	margin-right:8px;
+}
+
+.td-relative {
+	position: relative;
+	display: block;
+}
+.cartlist .itinerary-controls .thbg1 th {
+	background: #fff;
+	color: #000;
+}
+
+.itinerary-controls .order-head th, .itinerary-controls.order-head th{
+	background: #eee;
+	color: #333;
+}
+.itinerary-controls .time-course span+span{
+	margin-left:5px;
+}
+.time-course li {
+	display: inline-block;
+}
+
+.td-relative .right {
+	position: absolute;
+	right:0;
+	top:0;
+}
+
+.itinerary-controls .td-relative .chevron-up, .itinerary-controls .td-relative .chevron-down {
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	margin:auto;
+}
+.cartlist-box {
+	margin-bottom:16px;
+}
+.itinerary-controls th.formtd, .itinerary-controls td.formtd {
+	vertical-align: top;
+}
+.itinerary-controls .form-group {
+	margin-bottom:0;
+}
+.itinerary-controls .form-group+.form-group {
+    margin-top: 5px;
+}
+.itinerary-controls .number {
+	font-size: 1.5em;
+	font-size:600;
+	text-align: center;
+}
+.itinerary-controls .icon+.note, .trip-info .icon+.note {
+	margin-left:5px;
+}
+.itinerary-controls .note, .trip-info .note {
+	font-size: 0.88em;
+	display: inline;
+	line-height: 1.2;
+}
+/*列車班次*/
+.train-number {
+	width:100%;
+	position: relative;
+}
+.train-number li{
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 24px;
+	line-height: normal;
+	position: relative;
+}
+.train-number li .icon-train:before {
+	margin-left: -18px;
+}
+.times-2 li {
+	max-width: calc(50% - 16px);
+}
+.times-3 li {
+	max-width: calc(33% - 12px);
+}
+.train-number  li.icon-to {
+	width: 1em;
+	padding-left: 0;
+}
+
+/*下方選項*/
+.cartlist-option {
+	margin-bottom:50px;
+}
+/*------------------------------帳單小計表格-----------------------*/
+.billing-table {
+	width:80%;
+	float: right;
+	clear:right;
+}
+ .itinerary-controls .billing-table th, .itinerary-controls .billing-table td {
+	border: inherit;
+	padding:0 16px 10px 0;
+	background: inherit;
+	box-shadow: none;
+}
+.billing-table td, .billing-table th {
+	vertical-align: middle;
+	text-align: right;
+	padding-right:16px;
+	padding-bottom:10px;
+}
+
+.billing-table .detail {
+	color:#9a0000;
+	font-size:0.875em;
+}
+.billing-table .price {
+	font-size: 1.125em;
+	margin-right:5px;
+}
+.billing-table .total td, .billing-table .total th, .itinerary-controls .billing-table .total th, .itinerary-controls .billing-table .total td {
+	border-top:1px solid #eee;
+	padding-top:5px;
+}
+.billing-table .total .price {
+	color: #a90000;
+}
+/*在定單表格中的帳單記錄*/
+.itinerary-controls .cartlist-billing>td {
+	padding:16px;
+	background: ;
+}
+
+.itinerary-controls .cartlist-billing table, .cartlist-billing .title-liner {
+	width:500px;
+	float: right;
+	clear: right;
+}
+.itinerary-controls .cartlist-billing table {
+	width:450px;
+}
+}
+.cartlist-billing .title-liner h3 {
+	margin-top:0;
+}
+
+/*---------------------------定票紀錄--------------------------*/
+.order-mode {
+	margin:15px 0;
+	padding:5px 15px 0px 15px;
+}
+.order-mode .mode-info {
+	float:left;
+}
+.order-mode .mode-links {
+	float:right;
+	padding-top:10px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.order-mode .mode-info dl {
+	display: inline-block;
+	vertical-align: top;
+	margin-right:15px;
+	padding-right:15px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	border-right: 1px solid #eee;
+}
+.order-mode .mode-info dl:last-child {
+	border: none;
+}
+.order-mode .mode-info dt {
+	font-size: 0.938em;
+	margin-bottom:3px;
+	color: #000;
+}
+/*展開收合表單*/
+.sideup {
+	margin-bottom: 16px;
+}
+.sideup .sideup-box {
+	width: 100%;
+	clear: both;
+}
+
+.sideup-head {
+	padding:0 15px;
+	border-top:1px solid #ccc;
+	border-bottom:2px solid #ccc;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+11,f3f3f3+100 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 11%, #f3f3f3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #ffffff 11%,#f3f3f3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #ffffff 11%,#f3f3f3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 ); /* IE6-9 */
+	font-weight: 600;
+	position: relative;
+	line-height: 56px;
+	height: 56px;
+}
+.sideup-head .head-left {
+	float: left;
+}
+.sideup-head .head-right {
+	float: right;
+	text-align: right;
+}
+.sideup-head h4 {
+	margin:0;
+	display: inline-block;
+	font-weight: 600;
+}
+
+.sideup-head .icon.chevron-down, .sideup-head .icon.chevron-up {
+	margin-left:8px;
+}
+
+.sideup-box  .info-text {
+	padding: 10px 0;
+}
+.sideup-box .info-text dt,.sideup-box .info-text dd {
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+.sideup-content {/*內距加框線*/
+	padding:10px 20px;
+	border: 1px solid #ccc;
+}
+
+.sideup-area .title-border {/*左右內距取消*/
+	margin-right: -12px;
+	margin-left: -12px;
+	background: #eee;
+}
+.sideup-area+.sideup-area {
+	margin-top: 30px;
+}
+
+/*表格內詳細*/
+.side-detail {
+	padding:0 15px 20px 15px;
+}
+.side-detail .s-head {
+	margin-left: -15px;
+	margin-right: -15px;
+	background: #d1d1d1;
+	padding: 5px 15px;
+	margin-bottom: 10px;
+	color: #fff;
+	font-size: 1.125em;
+}
+.side-detail .info-text dt, .side-detail .info-text dd{
+    margin-top: 5px;
+}
+
+/*取票方式*/
+.column-take {
+	background: #eee;
+	padding:15px 2%;
+}
+.column-take dl {
+	padding:16px;
+}
+.column-take dl+dl {
+	border-top: 1px solid #ccc;
+}
+
+.column-take dt{
+	margin-bottom: 10px;
+	font-size: 1.125em;
+}
+.take-code {
+	margin-top:16px;
+	text-align: center;
+}
+.take-code li {
+	margin: 10px 15px;
+	border: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+.column-take .take-code li h4 {
+	background: #666;
+	color: #fff;
+}
+.take-code li h4, .column-take.take-step  .take-code h4 {
+	background: #eee;
+	padding:10px 0;
+	color: inherit;
+}
+
+.take-code .code-side {
+	display: inline-block;
+	max-width: 220px;
+	margin-right:30px;
+}
+.take-code .code-side img {
+	width: 100%;
+	height: auto;
+}
+
+.take-step {/*有步驟顯示的*/
+	background: #fff;
+	padding:15px 2%;
+}
+.step-mag {
+	text-align: center;
+	margin:25px 0;
+}
+
+
+
+.take-step .step-head {
+	border:1px solid #ccc;
+	background: #eee;
+	margin-bottom:15px;
+	padding:5px 15px;
+	position: relative;
+}
+.take-step .step-head .recom {
+	position: absolute;
+	right:10px;
+	top:5px;
+	font-size: 0.85em;
+	font-weight: normal;
+	color:red;
+}
+.take-step .step-head .stepby {
+	background: #666;
+	color:#fff;
+	padding:5px 10px;
+	margin-right:10px;
+	margin-left: -15px;
+	border:1px solid #666;
+}
+.column-take dd {
+	margin-left:15px;
+}
+
+/*-------------------------------------------座位表-------------------------------------------*/
+.seat-title h3 .type {
+	margin:0 5px;
+	font-size: 1.25em
+}
+.seat-info {
+	margin:5px 0;
+}
+.seat-info .float{
+	margin-left:10px;
+	float:right;
+}
+.seat-info .no, .seat-info .amount {
+	display: inline-block;
+}
+.seat-info .no {
+	margin-right:10px;
+	padding-right:5px;
+}
+.seat-info .amount .type {
+	margin-left:5px;
+	margin-right:3px;
+}
+
+.seat-info .amount .color-rag,.seat-info strong {
+	font-size: 1.25em;
+	margin:0 3px;
+}
+.seat-color {
+	margin-top:16px;
+}
+.seat-color span {
+	margin-left:10px;
+}
+.seat-color .seat-c1:before, .seat-color .seat-c2:before, .seat-color .seat-c0:before, .seat-color .seat-c3:before {
+	content: " ";
+	width:18px;
+	height: 18px;
+	display: inline-block;
+	margin-right:5px;
+}
+.seat-color .seat-c1:before {
+	background: #ffd800;
+	border:1px solid #ffc600;
+}
+.seat-color .seat-c2:before {
+	background: #ff7800;
+	border:1px solid #fe4e00;
+}
+.seat-color .seat-c0:before, .btn-seat.seat-c0 {
+	background: #fff;
+	border:1px solid #ccc;
+}
+.seat-color .seat-c3:before, .btn-seat.seat-c3 {
+	background: #666;
+	border:1px solid #424242;
+}
+.seat-color .seat-c1 {
+	margin-right:10px;
+}
+
+.seat-wrap {
+	margin:20px auto 50px auto;
+}
+.seat-head {
+	padding:10px;
+	border-bottom: 1px solid #eee;
+	margin-bottom:16px;
+	font-size: 1.25em;
+}
+.seat-head .small, .change-seat .change-head .small {
+	font-size: 0.778em;
+	color: #777;
+	margin-left:16px;
+}
+.btn-seat {
+	width:50px;
+	height:50px;
+	padding:3px 5px;
+	display: inline-block;
+	text-align: left;
+	line-height: 1.2;
+	overflow: hidden;
+	position: relative;
+}
+
+.btn-seat span {
+	display: block;
+}
+.btn-seat {
+	background: #eee;
+	border: 1px solid #ccc;
+}
+
+.btn-seat.seat-c1 {
+	background: #ffd800;
+	border:1px solid #ffc600;
+}
+.btn-seat.seat-c2 {
+	background: #ff7800;
+	border:1px solid #fe4e00;
+}
+.btn-seat.seat-hover {
+	cursor: pointer;
+}
+.btn-seat.seat-c1.seat-hover:hover, .btn-seat.seat-c1.active {
+	border: 1px solid #ffae00;
+	background: #ffc600;
+}
+.btn-seat.seat-c0:hover {
+	background: #eee;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+.btn-seat.seat-c2.seat-hover:hover, .btn-seat.seat-c2.active {
+	border:1px solid #e22500;
+	background: #fe4e00;
+}
+.btn-seat.active {
+	position: relative;
+}
+.btn-seat.active:after {
+	font-family: FontAwesome;
+    content: "\f00c";
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    width: 24px;
+    position: absolute;
+    top:15px;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.btn-seat+.btn-seat {
+	margin-left:8px;
+
+}
+.seat-row {
+	margin: 4px 0;
+	text-align: center;
+}
+/*---------座位表 打勾狀--------------*/
+input[type=radio].seat-check,
+input[type=checkbox].seat-check {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+input[type=radio].seat-check+label:after,
+input[type=checkbox].seat-check ~ label:after {
+    position: absolute;
+    top:0;
+    left:0;
+    content: " ";
+    font-size: 2em;
+    width: 48px;
+    height: 48px;
+    padding-top: 10px;
+}
+.seat-chief input[type=radio].seat-check:checked+label .amount,
+.seat-chief input[type=checkbox].seat-check:checked+label .amount {
+	z-index: 2;
+	position: absolute;
+	top: 3px;
+	left: 5px;
+}
+.seat-chief input[type=checkbox].seat-check:checked+label:after,
+.seat-chief input[type=radio].seat-check:checked+label:after {
+	background: #ff7800;
+	border:1px solid #fe4e00;
+	z-index: 1;
+}
+
+input[type=radio].seat-check:checked+label:after,
+input[type=checkbox].seat-check:checked ~ label:after  {
+    font-family: FontAwesome;
+    position: absolute;
+    content: "\f00c";
+    color: #666;
+    vertical-align: middle;
+    text-align: center;
+}
+
+input[type=radio].seat-check:focus ~ label:after,
+input[type=checkbox].seat-check:focus ~ label:after,
+input[type=radio].seat-check:focus ~ label,
+input[type=checkbox].seat-check:focus ~ label
+{
+    color: #00bcd2;
+}
+/*-----------------------------------彈跳框的座位表-------------------------------------*/
+.change-seat .change-head {
+	border-bottom: 1px solid #eee;
+	margin: 0 16px 16px 16px;
+}
+
+.change-seat .change-head .title{
+	font-size:1.25em;
+}
+.change-seat .change-head .seat-color {
+	margin-top:0;
+	text-align: right;
+}
+
+/*----------------------------------------餘票查詢---------------------------------------*/
+.ticketleft-info {
+	margin:10px 0;
+}
+.ticketleft-info dl, .ticketleft-info dt, .ticketleft-info dd {
+	display: inline-block;
+	margin-right:8px;
+}
+.ticketleft-info dl {
+	margin-right:16px;
+}
+.fullcircle.green:before {
+	color:#5bb900;
+}
+.fullcircle.color-rag:before {
+	color:#ff8400;
+}
+.fullcircle.red:before {
+	color:#ff0000;
+}
+.itinerary-controls .ticketleft {
+	text-align: center;
+}
+.itinerary-controls .ticketleft .icon:before {
+	margin-left:0;
+}
+.itinerary-controls .icon-ticket:before {
+    font-size:1.8em;
+    margin-left:0;
+}
+.itinerary-controls .icon-ticket:hover:before {
+    color:#009bad;
+}
+.ticketleft-info .pull-left {
+	padding-top:5px;
+}
+
+/*-----------------------------------團體票座位顯示----------------*/
+.group-seat dl{
+/* 	display: inline-block; */
+	margin:2px 10px 2px 0;
+	border-radius: 5px;
+	padding:5px 10px;
+	border:1px solid #ccc;
+}
+.group-seat dd {
+	display: inline-block;
+	margin:1px 5px 1px 0;
+}
+.group-seat dd+dd:before {
+	content: ",";
+	margin-right: 5px;
+}
+.group-seat dd+dd.noline:before {
+	content: " ";
+	margin-right: 0;
+}
+.group-seat dd img {
+	margin-right:5px;
+}
+
+/*-----------------------------------團體票訂單-------------------------------*/
+.ticket-list li {/*票種便當詳細*/
+	display: inline-block;
+}
+.ticket-list li+li:before {
+	content: "|";
+	margin:0 15px;
+	font-size: 0.8em;
+	color: #ccc;
+}
+
+/*---------------------------------------流程圖------------------------*/
+.stroke-wrap {
+	margin:1em 0;
+}
+.stroke-list dl{
+	display: inline-block;
+	padding:5px 10px;
+	border-radius: 10px;
+	background: #fff;
+	border:1px solid #ccc;
+	margin-right:30px;
+	position: relative;
+	box-shadow: 0 3px 0 #ccc;
+	min-width: 120px;
+	text-align: center;
+	height: 60px;
+	vertical-align: middle;
+	margin-top: 15px;
+}
+
+.stroke-list dl:after {
+	display: inline-block;
+	content: " ";
+	width: 47px;
+    height: 47px;
+    transform: rotate(135deg);
+	border-radius: 10px;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+    position: absolute;
+	right: -16px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: 0 -3px 0 #ccc;
+background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 52%, rgba(255,255,255,0) 53%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 52%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 52%,rgba(255,255,255,0) 53%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.stroke-list dd {
+	font-size: 0.9em;
+	color: #666;
+	margin-top: 3px;
+}
+
+.stroke-list dl:nth-last-child(1):after {
+	display: none;
+}
+.stroke-list dl.last-stion dt {
+	position: relative;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+/*如何*/
+.box_howgo dl{
+	margin: 16px 0;
+	padding: 16px 20px;
+	background: #f7f7f7;
+}
+.box_howgo dt {
+	font-size: 1.2em;
+	margin-bottom:6px;
+	position: relative;
+}
+.box_howgo dd {
+	margin-bottom: 10px;
+}
+
+/*-------------------------專列行程明細----------------------*/
+.charter-details {
+	padding: 15px 20px;
+	background: #fff;
+	margin-top :15px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2) inset;
+	border-radius: 5px;
+}
+.charter-dtable {
+	font-size: 0.875em;
+	width:100%;
+}
+.charter-dtable th, .charter-dtable td {
+	padding:5px;
+	border-bottom: 1px solid #666;
+	text-align: center;
+}
+.charter-dtable th {
+	background: #666;
+	color: #fff;
+}
+.charter-dtable td {
+	background: rgba(255,255,255,0.5);
+}
+.charter-dtable td:last-child {
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+.charter-dtable td:first-child {
+	border-left: 1px solid #ccc;
+}
+.charter-dtable .sum td{
+	background: none;
+	border:none;
+}
+
+/*票卷 購物車*/
+.cart-info {
+    margin: 30px 0;
+}
+
+/*-----------------退款--------------*/
+.return-total {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-bottom: 3px solid #ccc;
+	background: #eee;
+	text-align: center;
+	margin-top: -30px;
+}
+.return-total dt, .return-total dd {
+	display: inline-block;
+	margin: 0 5px;
+}
+.return-total dt, .return-total .money {
+	font-size: 1.125em;
+	color: #ff0000;
+}
+.return-total .money {
+	margin: 0 5px;
+}
+/*
+     FILE ARCHIVED ON 09:42:31 May 01, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:07:49 Aug 14, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.407
+  captures_list: 0.525
+  exclusion.robots: 0.067
+  exclusion.robots.policy: 0.054
+  esindex: 0.005
+  cdx.remote: 14.632
+  LoadShardBlock: 80.724 (3)
+  PetaboxLoader3.datanode: 126.413 (5)
+  load_resource: 265.534 (2)
+  PetaboxLoader3.resolve: 137.286 (2)
+*/

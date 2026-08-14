@@ -1,0 +1,38 @@
+.sorted:after{
+	display: inline-block;
+	font-family: 'FontAwesome';
+	margin-left: 4px;
+	content: "\f0d8";
+   	color: #777;
+}
+
+.sorted.sorted-desc:after{
+	content: "\f0d7";
+	color: #00bcd2;
+}
+
+.sorted.sorted-asc:after{
+	content: "\f0d8";
+	color: #00bcd2;
+}
+/*
+     FILE ARCHIVED ON 09:42:32 May 01, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:07:49 Aug 14, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 2.694
+  captures_list: 0.472
+  exclusion.robots: 0.061
+  exclusion.robots.policy: 0.051
+  esindex: 0.007
+  cdx.remote: 26.462
+  LoadShardBlock: 77.831 (3)
+  PetaboxLoader3.datanode: 69.975 (4)
+  load_resource: 59.677
+  PetaboxLoader3.resolve: 35.555
+*/

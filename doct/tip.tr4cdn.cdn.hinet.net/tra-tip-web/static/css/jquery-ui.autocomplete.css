@@ -1,0 +1,51 @@
+/* è‡ªå‹•å®Œæˆmenu */
+.ui-autocomplete
+{
+    text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+
+    /* core styles should not be changed */
+    position: absolute; display: none; z-index: 9999; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+}
+
+/* è‡ªå‹•å®Œæˆé¸é … */
+.ui-autocomplete .ui-menu-item{ position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; font-family: "ï¿½Lï¿½nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "Microsoft JhengHei", "ï¿½sï¿½Ó©ï¿½ï¿½ï¿½", "PMingLiU", "ï¿½Ó©ï¿½ï¿½ï¿½", "MingLiU", "ï¿½Ð·ï¿½ï¿½ï¿½", "DFKai-sb", serif;}
+
+/* é¸é …hoverç‰¹æ•ˆ s */
+.ui-autocomplete.ui-menu .ui-menu-item-wrapper{padding:0px;}
+
+.ui-autocomplete .ui-menu-item kw { font-weight: normal; color: #1f8dd6;}
+
+
+.ui-autocomplete.ui-widget-content li:hover{
+	background: #f0f0f0; 
+	border:0px;
+}
+
+
+.ui-autocomplete.ui-widget-content .ui-state-active{
+	background: #f0f0f0; 
+	border:0px;
+	color: #1f8dd6; 
+	margin:0px;
+}
+/* é¸é …hoverç‰¹æ•ˆ e */
+/*
+     FILE ARCHIVED ON 03:13:38 May 09, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 08:07:49 Aug 14, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.432
+  captures_list: 0.435
+  exclusion.robots: 0.057
+  exclusion.robots.policy: 0.047
+  esindex: 0.006
+  cdx.remote: 21.444
+  LoadShardBlock: 134.814 (3)
+  PetaboxLoader3.datanode: 151.742 (4)
+  load_resource: 25.347
+*/
