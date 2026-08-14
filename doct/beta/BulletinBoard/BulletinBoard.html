@@ -87,6 +87,47 @@
             });
         });
     </script>
+        	 <div style="display:none;">
+            <div>
+              <div style="height: 179px;width: 494px;top: 19px; position: relative;">
+                <form>
+                  <textarea type="text" id="text1" style="width:400px;height: 50px;" value=""></textarea>
+                  <input type="reset" value="清除" />
+                </form>
+                <button type="button" id="btn1" class="btn btn-basic btn-lg g-recaptcha"
+                  data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit">複製</button>
+                
+              </div>
+<div style="height: 179px;width: 494px;top: 19px; position: relative;">
+                <form>
+                  <textarea type="text" id="text2" style="width:400px;height: 50px;" value=""></textarea>
+                  <input type="reset" value="清除" />
+                </form>
+                <button type="button" id="btn2" class="btn btn-basic btn-lg g-recaptcha"
+                  data-sitekey="6Lc7YoUoAAAAADBikFoOMUOacYD1Ls0usr9Xf_vZ" data-callback="onSubmit">複製</button>
+                
+              </div>
+              <script>
+                const select = (DOM) => document.querySelector(DOM);
+
+                select('#btn1').addEventListener('click', () => {
+                  select('#text1').select();
+                  document.execCommand("copy");
+                })
+				select('#btn2').addEventListener('click', () => {
+                  select('#text2').select();
+                  document.execCommand("copy");
+                })
+                select('#textarea-btn').addEventListener('click', () => {
+                  select('#textarea').select();
+                  document.execCommand("copy");
+                })
+              </script>
+
+              
+            </div>
+            
+          </div>
 
 </body>
 </html>
