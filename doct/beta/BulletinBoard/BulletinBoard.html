@@ -21,6 +21,11 @@
             padding: 10px 20px; 
             cursor: pointer; 
         }
+		.detail {
+			width: 585px;
+    		height: 500px;
+    		border: none;
+		}
     </style>
     <!-- 引入 reCAPTCHA API -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -47,7 +52,7 @@
         <button type="submit" id="submitBtn">送出留言</button>
     </form>
 	
-	<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRf19r1rgdm3FNpJbmyUCpVynSpfkeNhEh2sHmqwXL1lUl7hNpZ2_iLTAx5bAN225inZbpvwtUQ4hMC/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+	<iframe class="detail" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRf19r1rgdm3FNpJbmyUCpVynSpfkeNhEh2sHmqwXL1lUl7hNpZ2_iLTAx5bAN225inZbpvwtUQ4hMC/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
     
 	<script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwf42mEgPHMYUxtkZAsPsfB0iKIUGRDBDX0lab8xxuLsPBc8SH6FM5gihggwy-VrbIdqw/exec';
@@ -89,6 +94,7 @@
             });
         });
     </script>
+<!------------------------------------------Webkit按鈕相容程式區段------------------------------------------->
         	 <div style="display:none;">
             <div>
               <div style="height: 179px;width: 494px;top: 19px; position: relative;">
