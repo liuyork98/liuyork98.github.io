@@ -20,6 +20,7 @@
             font-family: sans-serif; 
             max-width: 500px; 
             margin: 2rem auto; 
+			margin-top: 20px;
         }
         .form-group { 
             margin-bottom: 1rem; 
@@ -39,12 +40,19 @@
     		border: none;
 			margin: 10px 0 0 0;
 		}
+		.goback {
+    width: 87.19px;
+		}
     </style>
     <!-- 引入 reCAPTCHA API -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
+<div class="goback">
+        <button onclick="history.back()">回上頁</button>
+            
 
+</div>
     <h2>留言板Beta</h2>
     
     <form id="messageForm">
