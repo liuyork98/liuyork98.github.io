@@ -664,10 +664,11 @@
 				  <input class="btn btn-3d" type="reset" onclick="resetreCAPTCHA()" value="重設"/>
 				  		<script>
 							function resetreCAPTCHA() {
-    						const iframe = document.querySelector('iframe[title="reCAPTCHA"]');
-    							if (iframe) {
-        								iframe.src = iframe.src; // 支援跨網域的刷新寫法
-								}
+    						const iframes = document.querySelectorAll('iframe[title="reCAPTCHA"]');
+    							iframes.forEach(iframe => {
+        							iframe.src = iframe.src; // 支援跨網域的刷新方式
+    							});
+
 							}
 						</script>
 			  </form>
