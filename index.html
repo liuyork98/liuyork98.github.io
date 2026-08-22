@@ -661,7 +661,15 @@
               </script>
 
             </div>
-				  <input class="btn btn-3d" type="reset" value="重設"/>
+				  <input class="btn btn-3d" type="reset" onclick="resetreCAPTCHA()" value="重設"/>
+				  		<script>
+							function resetreCAPTCHA() {
+    						const iframe = document.querySelector('iframe[title="reCAPTCHA"]');
+    							if (iframe) {
+        								iframe.src = iframe.src; // 支援跨網域的刷新寫法
+								}
+							}
+						</script>
 			  </form>
             <div>
               <input type="password" id="passwordInput" placeholder="輸入密碼">
